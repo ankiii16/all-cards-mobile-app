@@ -1,0 +1,18 @@
+// import {Platform, Dimensions} from 'react-native';
+export const PRIMARY_COLOR = '#B2FCE3';
+export const SECONDARY_COLOR = '#F5F5F5';
+export const TERTIARY_COLOR = '#BDBDBD';
+export const COLOR_BLACK = '#000';
+export const COLOR_WHITE = '#FFF';
+export const COLOR_TRANSPARENRT = 'transparent';
+export const FONT_FAMILY_REGULAR = 'Metropolis-Regular';
+export const FONT_FAMILY_MEDIUM = 'Metropolis-Medium';
+export const FONT_FAMILY_BOLD = 'Metropolis-Bold';
+export const FONT_SIZE_REGULAR = 14;
+export const FONT_SIZE_SMALL = 12;
+export const FONT_SIZE_SMALL_XS = 10;
+export const FONT_SIZE_MEDIUM = 16;
+export const FONT_SIZE_LARGE = 18;
+export const FONT_SIZE_LARGE_XL = 20;
+export const FONT_SIZE_LARGE_XXL = 22;
+export const FONT_SIZE_LARGE_XXXL = 24;
