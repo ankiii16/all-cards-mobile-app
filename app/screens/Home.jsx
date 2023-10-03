@@ -1,24 +1,26 @@
 import React from 'react';
 
-import { View, Text} from 'react-native';
-import Styles from '../styles/screens/Profile.style'
+import {View, Image, Text, TouchableOpacity} from 'react-native';
+import styles from '../styles/screens/Profile.style';
 import FlexCard from '../components/flex-card';
 
-
-export default function HomeScreen(){
-
+export default function HomeScreen() {
   return (
-    <View style={Styles.container}>
-      <FlexCard
-      imageTitleText='Ma Ninja Hathori'
-      showImage={true}
-      variant="small"
-      >
-
-      </FlexCard>
-        <Text>
-            Home Screen
-        </Text>
+    <View style={styles.cardContainer}>
+    <View style={styles.cardContent}>
+      <View style={styles.imageContainer}>
+        <Image
+          source={require('../../assets/images/download.jpeg')}
+          style={styles.cardImage}
+          crossOrigin='anonymous'
+          resizeMode='contain'
+        />
+      </View>
+      <View style={styles.textContainer}>
+        <Text style={styles.cardTitle}>Hyundai Elantra</Text>
+        <Text style={styles.cardText}>$180/day</Text>
+      </View>
     </View>
+  </View>
   );
 }
