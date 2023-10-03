@@ -16,3 +16,4 @@ export const FONT_SIZE_LARGE = 18;
 export const FONT_SIZE_LARGE_XL = 20;
 export const FONT_SIZE_LARGE_XXL = 22;
 export const FONT_SIZE_LARGE_XXXL = 24;
+export const MARGIN_TOP = 10;
