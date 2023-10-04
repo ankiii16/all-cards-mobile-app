@@ -1,0 +1,8 @@
+export const PERSONAL_SETTINGS = "Personal Settings"
+export const RECENT_ORDERS = "Recent Orders"
+export const FAVOURITES = "Favourites"
+export const MY_LISTINGS = "My Listings"
+export const FORMS = "Forms"
+export const FAQS = "Faqs"
+export const CONTACT_US = "Contact Us"
+export const PROFILE = "Profile"

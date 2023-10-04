@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {View, Image, Text, TouchableOpacity} from 'react-native';
-import styles from '../styles/screens/Profile.style';
+import styles from '../styles/screens/Home.style';
 import FlexCard from '../components/flex-card';
 
 export default function HomeScreen() {

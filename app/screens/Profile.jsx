@@ -1,80 +1,72 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet, ScrollView} from 'react-native';
-
+import {
+  Text,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
+import * as Routes from '../constants/routes';
+import Styles from '../styles/screens/Profile.style'
 const profileScreenOptions = [
   {
     title: 'Personal Settings',
-    route: '',
+    route: Routes.PERSONAL_SETTINGS,
     id: 1,
   },
   {
     title: 'Recent Orders',
-    route: '',
+    route: Routes.RECENT_ORDERS,
     id: 2,
   },
   {
     title: 'Favourites',
-    route: '',
+    route: Routes.FAVOURITES,
     id: 3,
   },
   {
     title: 'My Listing',
-    route: '',
+    route: Routes.MY_LISTINGS,
     id: 4,
   },
   {
     title: 'Forms',
-    route: '',
+    route: Routes.FORMS,
     id: 5,
   },
   {
     title: "FAQ's",
-    route: '',
+    route: Routes.FAQS,
     id: 6,
   },
 ];
 
-export default ProfileScreen = () => {
+export default ProfileScreen = ({navigation}) => {
+  const navigateToRoute = item => navigation.navigate(item);
+
   return (
-    <ScrollView style={styles.container}>
-     <List/>
+    <ScrollView style={Styles.container}>
+      <List navigateToRoute={navigateToRoute} />
     </ScrollView>
   );
 };
 
-const List = () => {
-  return profileScreenOptions.map((data,index)=>{
-    return <SmallListCard item={data}/>
-  })
+const List = ({navigateToRoute}) => {
+  return profileScreenOptions.map((data, index) => {
+    return (
+      <SmallListCard
+        item={data}
+        key={index}
+        navigateToRoute={navigateToRoute}
+      />
+    );
+  });
 };
 
-const SmallListCard = ({item}) => {
+const SmallListCard = ({item, navigateToRoute}) => {
   return (
-    <View style={styles.card}>
-      <Text style={styles.cardText}>{item.title}</Text>
-    </View>
+    <TouchableOpacity
+      style={Styles.card}
+      onPress={() => navigateToRoute(item.route)}>
+      <Text style={Styles.cardText}>{item.title}</Text>
+    </TouchableOpacity>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#f0f0f0',
-  },
-  list: {
-    paddingHorizontal: 16,
-    paddingVertical: 20,
-  },
-  card: {
-    backgroundColor: 'white',
-    // borderRadius: 8,
-    padding: 16,
-    borderColor: 'black',
-    borderWidth: 1,
-  },
-  cardText: {
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-});
-
